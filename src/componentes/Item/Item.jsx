@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+import { ItemCount } from '../ItemCount/ItemCount'
 import './Item.css'
 
-export const Item = ({id, name, img, price, stock}) => {
+export const Item = ({id, name, foto, price, stock}) => {
 
     return (
         <article className='cardItem'>
@@ -11,10 +13,10 @@ export const Item = ({id, name, img, price, stock}) => {
             </header>
 
             <picture>
-                <img src=" {img} " alt=" {name} " className='itemImg' />
+                <img src={foto}  alt={name}  className='itemImg' />
             </picture>
 
-            <section>
+            <section className='sectionInfo'>
                 <p className='info'>
                     Precio: ${price}
                 </p>
@@ -22,12 +24,12 @@ export const Item = ({id, name, img, price, stock}) => {
                 <p className='info'>
                     Stock/Cantidad disponible: {stock}
                 </p>
+
+                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada " ,quantity)} />
             </section>
 
             <footer className='itemFooter'>
-                <button className='option'>
-                    Ver Detalle
-                </button>
+                <Link to={`/detail/${id}`} className='option'> Ver Detalle </Link>
             </footer>
 
         </article>

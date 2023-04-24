@@ -1,10 +1,12 @@
+import { NavLink, Link } from "react-router-dom";
+
 export const Titulo = ( )   => {
 
     return (
         <div className="logo">
-            <a href="./index.html">
+            <Link to='/'>
                 <h1>Flyrzk</h1>
-            </a>            
+            </Link>           
         </div>
     )
 }

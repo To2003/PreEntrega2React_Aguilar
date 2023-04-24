@@ -1,0 +1,33 @@
+.cardItemDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 20%;
+    margin: 16px auto;
+}
+
+picture {
+    width: auto;
+    height: auto;
+}
+
+.itemDetailImg {
+    width: 200px;
+    height: 200px;
+}
+
+.sectionItemDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionItemDetail .info {
+    margin-bottom: -8px;
+}
+
+.footerItemDetail {
+    margin-bottom: 64px;
+}
+

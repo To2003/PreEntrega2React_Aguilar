@@ -3,27 +3,30 @@ const products = [
         id: '1',
         name: 'Remera 1',
         price: 2000,
-        img: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Funiversoventura.vteximg.com.br%2Farquivos%2Fids%2F193028-600-600%2FRemera-Manga-Corta-DC-Shoes-Round-We-Go-Urbano-Hombre-Negro-1222102104.jpg%3Fv%3D637789732032600000&tbnid=tNbU8DxD7kezIM&vet=12ahUKEwiO0vP63cH-AhUIspUCHZ-bDHMQMygAegUIARCXAg..i&imgrefurl=https%3A%2F%2Fwww.universoaventura.com.ar%2Fremera-manga-corta-dc-shoes-round-we-go-urbano-hombre-negro-1222102104%2Fp&docid=OsPZLV8JOc2EKM&w=600&h=600&q=REmeras&client=opera-gx&ved=2ahUKEwiO0vP63cH-AhUIspUCHZ-bDHMQMygAegUIARCXAg',
+        foto: 'https://frikio.site44.com/sites/frikio.com.ar/files/productcache/4/11/remera_evolution_gamer_11.jpg',
         stock: 20,
-        description: ''
+        description: 'Unisex | Talles: desde S a XXL',
+        category: 'Remeras'
     },
 
     {
         id: '2',
         name: 'Remera 2',
         price: 3000,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ftierheimseite.de%2Fremera-manga-corta-dc-shoes-round-we-go-urbano-cc-35355168&psig=AOvVaw16o2bSwQ4j2e11sxgueGTl&ust=1682398772480000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMDjpf3dwf4CFQAAAAAdAAAAABAN',
+        foto: 'https://tienda.guantexindustrial.com.ar/2507-large_default/remera-algodon-jersey-gris-talle-xxxl.jpg',
         stock: 20,
-        description: ''
+        description: 'Unisex | Talles: desde S a XX',
+        category: 'Remeras' 
     },
     
     {
         id: '3',
         name: 'Remera 3',
         price: 1500,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Farticulo.mercadolibre.com.ar%2FMLA-1116306156-remera-manga-corta-dc-star-hombre-negra-_JM&psig=AOvVaw16o2bSwQ4j2e11sxgueGTl&ust=1682398772480000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMDjpf3dwf4CFQAAAAAdAAAAABAV',
+        foto: 'https://universoventura.vteximg.com.br/arquivos/ids/193028-500-500/Remera-Manga-Corta-DC-Shoes-Round-We-Go-Urbano-Hombre-Negro-1222102104.jpg?v=637789732032600000',
         stock: 20,
-        description: ''
+        description: 'Unisex | Talles: desde S a XX',
+        category: 'Remeras'
     }
 ]
 
@@ -32,6 +35,22 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
+        }, 500)
+    })
+}
+
+export const getProductsById = (productsId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productsId))
+        }, 500)
+    })
+}
+
+export const getProductsByCategory = (productsCategory) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.category === productsCategory))
         }, 500)
     })
 }

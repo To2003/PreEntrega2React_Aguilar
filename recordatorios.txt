@@ -1,0 +1,2 @@
+1- cd preentrega1
+2- npm run dev // nuevo live server, es mas rapido

@@ -1,0 +1,110 @@
+/* Mobile First */
+
+/* Title.jsx */
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+}
+
+.logo a h1 {
+    display: block;
+    
+    /* Espaciado */
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+    /* Font */
+    font-weight: bold;
+    font-weight: 500;
+}
+
+/* navBar.jsx */
+
+.header{
+    margin-bottom: 16px;
+    width: 100%;
+    background-color: #777077;
+    display: flex;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: bisque;
+    z-index: 15000;
+    padding: 0.3125rem 0.625rem 0.625rem;
+    margin-top: 8px;
+    align-content: center;
+    left: -8px;
+}
+.listaMenu {
+    /* Font */
+    font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
+
+    /* Centrar */
+    display: flex;
+    flex-direction: none;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Tamaño */
+    max-width: 400px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.listaMenu li {
+    position: relative;
+}
+
+.listaMenu li a {
+    padding: 4px;
+
+    /* Centrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+}
+
+.listaMenu li a svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.listaMenu li a span {
+    font-size: 12px;
+}
+
+.listaMenu li ul {
+    display: none;
+}
+
+/*ItemListContainer */
+
+.contenedor {
+    width: calc(100% - 32px);
+    max-width: 1080px;
+    margin: 0 auto;
+
+    /* Centrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    /* Texto */
+    text-align: center;
+}
+
+.itemList {
+    width: 80%;
+    background-color: darkgrey;
+}

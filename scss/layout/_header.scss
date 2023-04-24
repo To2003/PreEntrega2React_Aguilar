@@ -1,0 +1,199 @@
+.logo {
+
+    a {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-weight: 400;
+        }
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    
+    .header {
+        background-color: darkgray;
+        margin-bottom: $space-s;
+    }
+
+    .Menu {
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        z-index: 15000;
+        border-top: 1px solid #e4e4e4;
+        width: 100%;
+        background-color: red;
+        padding: 0.3125rem 0.625rem 0.625rem;
+        margin-top: $space-xs;
+        align-content: center;
+        left: -8px;
+
+    }
+
+    /* Nesting class: "listaMenu" */
+
+    .listaMenu{
+        @include font ($font-s, bold, oblique);
+        padding-left: 0;
+        @include flex-box (none, space-around, center);
+        max-width: 400px;
+        margin: 0 auto;
+
+        li {
+            position: relative;
+
+            a {
+                padding: $space-xxs;
+                @include flex-box (column, none, center);
+
+                svg {
+                    width: $long-m;
+                    height: $tall-m;
+                    fill: white;
+                    margin-bottom: $space-xxs;
+                }
+
+                span{
+                    font-size: ($font-s) - 4;
+                    color: white;
+                }
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    } 
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1199px) {
+
+    .header {
+        background-color: darkgray;
+        margin-bottom: $space-s;
+    }
+
+    .Menu {
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        z-index: 15000;
+        border-top: 1px solid #e4e4e4;
+        width: 100%;
+        background-color: red;
+        padding: 0.3125rem 0.625rem 0.625rem;
+        margin-top: $space-xs;
+        align-content: center;
+        left: -8px;
+    }
+
+    .listaMenu{
+
+        @include font ($font-s, bold, oblique);
+        padding-left: 0;
+        @include flex-box (none, space-around, center);
+        max-width: 400px;
+        margin: 0 auto;
+
+        li {
+            position: relative;
+
+            a {
+                padding: $space-xxs;
+                
+                @include flex-box (column, none, center);
+
+                svg {
+                    width: $long-m;
+                    height: $tall-m;
+                    fill: white;
+                    margin-bottom: 4px;
+                }
+
+                span{
+                    font-size: $font-s;
+                    color: white;
+                }
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+header {
+    background-color: #c8c8c8;
+    margin-bottom: $space-s;
+    padding: $space-s;
+
+    .contenedor {
+        @include flex-box (row, space-between, none);
+    }
+}
+
+.Menu {
+    text-align: inline;
+    @include flex-box (none, none, center);
+
+    .listaMenu {
+        @include font ($font-m, bold, oblique);
+        display: block;
+    
+        li {
+            display: inline-block;
+            margin-right: $space-m;
+            position: relative;
+    
+            a {
+                display: block;
+                padding: 0 $space-xs;
+
+                svg {
+                    display: none;
+                }
+    
+                &:hover {
+
+                    color: white;
+                }
+            }
+    
+            ul {
+                display: none;
+                position: absolute;
+                left: $space-xs;
+                z-index: 10;
+                font-size: $font-s;
+                padding: 0%;
+    
+                li {
+                    margin-top: $space-xs;
+
+                    a{
+                        
+                        &:hover{
+                            color: red;
+                        }
+
+                    }
+                }
+            }
+    
+            &:hover {
+    
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+}

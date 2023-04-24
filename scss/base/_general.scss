@@ -1,0 +1,32 @@
+body > div {
+    z-index: -100px;
+    visibility: hidden;
+}
+
+
+
+p {
+    line-height: 26px;
+    font-size: $font-s;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    width: calc(100% - 32px);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 $space-s;
+}
+
+.logo {
+    width: 96px;
+}
